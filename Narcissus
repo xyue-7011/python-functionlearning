@@ -1,0 +1,11 @@
+'''寻找三位数中所有水仙花数'''
+def Narcissus():
+    for i in range(100, 1000):
+        temp=i
+        sum=0
+        while temp:
+            sum=sum+(temp%10)**3
+            temp=temp//10
+        if i==sum:
+            print(i,end=' ')
+        
