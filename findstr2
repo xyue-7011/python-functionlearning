@@ -1,0 +1,18 @@
+'''查找字符串重复,子字符串为2个字符'''
+
+def findstr(Str,substr):
+    count=0
+    length=len(Str)
+    if substr not in Str:
+        print('子字符串不在目标字符串中')
+    else:
+        for each in range(length-1):   #length-1 因为要比对两个字母，到最后第二个
+            if Str[each]==substr[0]:
+                if Str[each+1]==substr[1]:
+                    count+=1
+        print('子字母串在目标字符串中共出现',count,'次')
+
+
+s1=input('请输入目标字符串： ')
+s2=input('请输入子字符串： ')
+findstr(s1,s2)
