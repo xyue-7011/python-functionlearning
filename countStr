@@ -1,0 +1,18 @@
+'''统计出传入字符串参数（可能不只一个参数）的英文字母、空格、数字和其它字符的个数，不定形参的应用'''
+def countStr(*param):
+    length=len(param)
+    for i in range(length):
+        blankcount = 0
+        numcount = 0
+        lettercount = 0
+        charcount = 0
+        for each in param[i]:
+            if each == ' ':
+                blankcount += 1
+            elif each.isdigit():
+                numcount += 1
+            elif each.isalpha():
+                lettercount += 1
+            else:
+                charcount += 1
+        print('第%d字符串中出现数字%d次，字母%d次，空格%d次，其他字符%d次' %(i+1,numcount,lettercount,blankcount,charcount))
