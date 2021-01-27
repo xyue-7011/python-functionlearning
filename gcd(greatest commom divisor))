@@ -1,0 +1,14 @@
+'''利用欧几里得算法（展转相除法）求两数的最大公约数'''
+def gcd(x,y):    
+    if x==0 or y==0:
+        return (print('0没有约数'))
+    elif x==y:
+        return x
+    else:
+        x=max(x,y)
+        y=min(x,y)
+        while y:
+            t = x % y
+            x = y
+            y = t
+    return x
